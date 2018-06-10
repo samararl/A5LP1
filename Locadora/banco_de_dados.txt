@@ -1,0 +1,66 @@
+﻿create table filme (
+    id_filme int ,
+	titulo varchar(20) NOT NULL,
+    duracao time NOT NULL,
+    valor float NOT NULL,
+    sub_titulo varchar(20) NULL,
+    genero int NOT NULL,
+    sinopse varchar(200) NULL,
+    data_lancamento date NULL,
+    nota float NULL,
+    dt_inclusao date NOT NULL,
+    dt_update date NULL,
+    PRIMARY KEY (id_filme),
+    FOREIGN KEY (genero) REFERENCES genero(id_genero)
+);
+
+
+create table genero (
+  id_genero int,
+  nome varchar(20)    ,
+  PRIMARY KEY(id_genero)
+);
+
+create table tipo_de_acesso (
+    id_tipo_de_acesso int,
+    descricao varchar(20),
+    PRIMARY KEY(id_tipo_e_acesso)
+ );
+
+create table usuario (
+    id_usuario int,
+    nome varchar(30) NOT NULL,
+    nickname varchar (20) NOT NULL,
+    acesso int NOT NULL,
+	senha varchar(500) NOT NULL,
+	dt_inclusao date NOT NULL,
+    dt_update date NULL,
+    PRIMARY KEY (id_usuario),
+    FOREIGN KEY (acesso) REFERENCES tipo_de_acesso(id_tipo_de_acesso)    
+);
+
+create table cliente (
+  id_cliente int,
+  nome varchar(100) NOT NULL,
+  logradouro varchar(200) NOT NULL,
+  bairro varchar(50) NOT NULL,
+  cidade varchar(20) NOT NULL,
+  celular varchar(10) NOT NULL,
+  email varchar(100) NOT NULL,
+  dt_inclusao date NOT NULL, 
+  dt_update date NULL,
+  PRIMARY KEY (id_cliente)
+);
+
+create table cliente_locacao (
+  id_cliente_locacao int,
+  id_cliente int,
+  id_filme int,
+  dt_locacao date NOT NULL,
+  dt_devolucao date,
+  PRIMARY KEY (id_cliente_locacao),
+  FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
+  FOREIGN KEY (id_filme) REFERENCES filme(id_filme)
+);
+
+create table locacao_periodo();

@@ -1,0 +1,79 @@
+﻿<Page x:Class="Locadora.LocadoraHome"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Locadora"
+      mc:Ignorable="d"
+      Title="Locadora - Home" Width="1200" Height="800">
+
+    <Grid Margin="-2,10,0,10" RenderTransformOrigin="0.578,0.803" Background="#FFF6F6F6" HorizontalAlignment="Left" Width="1190">
+
+        <Grid.Resources>
+            <!-- Name item template -->
+            <DataTemplate x:Key="nameItemTemplate">
+                <Label Content="{Binding XPath=@Name}"/>
+            </DataTemplate>
+            <!-- Expense Report Data -->
+            <XmlDataProvider x:Key="ExpenseDataSource" XPath="Expenses">
+                <x:XData>
+                    <Expenses xmlns="">
+                        <Person Name="Mike" Department="Legal">
+                            <Expense ExpenseType="Lunch" ExpenseAmount="50" />
+                            <Expense ExpenseType="Transportation" ExpenseAmount="50" />
+                        </Person>
+                        <Person Name="Lisa" Department="Marketing">
+                            <Expense ExpenseType="Document printing"
+      ExpenseAmount="50"/>
+                            <Expense ExpenseType="Gift" ExpenseAmount="125" />
+                        </Person>
+                        <Person Name="John" Department="Engineering">
+                            <Expense ExpenseType="Magazine subscription" 
+     ExpenseAmount="50"/>
+                            <Expense ExpenseType="New machine" ExpenseAmount="600" />
+                            <Expense ExpenseType="Software" ExpenseAmount="500" />
+                        </Person>
+                        <Person Name="Mary" Department="Finance">
+                            <Expense ExpenseType="Dinner" ExpenseAmount="100" />
+                        </Person>
+                    </Expenses>
+                </x:XData>
+            </XmlDataProvider>
+        </Grid.Resources>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1190" />
+            <ColumnDefinition Width="0*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0*" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+
+        <Label Style="{StaticResource headerTextStyle}" Margin="525,145,451,593" Content="Locadora Moon's" Height="42" FontSize="24" >
+            <Label.Background>
+                <ImageBrush/>
+            </Label.Background>
+        </Label>
+
+        <!-- View report button -->
+        <Label Content="Senha:" HorizontalAlignment="Left" Margin="468,276,0,0" VerticalAlignment="Top" Height="26" Width="52" FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="525,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Background="Transparent" BorderThickness="0,0,0,1"/>
+        <Label Content="Login:" HorizontalAlignment="Left" Margin="468,217,0,0" VerticalAlignment="Top" Height="26" Width="52" FontWeight="Bold"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="525,275,0,0" VerticalAlignment="Top" Width="214" Height="26" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+        <Button Content="ENTRAR" HorizontalAlignment="Left" Margin="652,379,0,0" VerticalAlignment="Top" Width="87" Height="29" FontWeight="Bold" BorderThickness="0" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Esqueceu sua senha?" HorizontalAlignment="Left" Margin="596,323,0,0" VerticalAlignment="Top" Width="143" BorderBrush="Transparent" Background="Transparent" Padding="1" Grid.IsSharedSizeScope="True" Height="20"/>
+        <Border BorderBrush="#FF666666" BorderThickness="1" HorizontalAlignment="Left" Height="332" Margin="412,101,0,0" VerticalAlignment="Top" Width="418" CornerRadius="20"/>
+    </Grid>
+</Page>

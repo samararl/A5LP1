@@ -1,0 +1,57 @@
+﻿<Page x:Class="Locadora.LocadoraCliente"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Locadora"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="LocadoraCliente">
+
+    <Grid Background="#FF263238" Height="790" VerticalAlignment="Bottom">
+        <Grid HorizontalAlignment="Left" Height="611" Margin="190,136,0,0" VerticalAlignment="Top" Width="832" Background="#FFF6F6F6">
+            <Label Style="{StaticResource headerTextStyle}" Margin="283,37,311,532" Content="Cadastro de Cliente" Height="42" FontSize="24" >
+                <Label.Background>
+                    <ImageBrush/>
+                </Label.Background>
+            </Label>
+            <TextBox HorizontalAlignment="Left" Height="29" Margin="45,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="Nome:" HorizontalAlignment="Left" Margin="41,102,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.837,-0.577"/>
+            <Label Content="Cep:" HorizontalAlignment="Left" Margin="42,163,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="29" Margin="45,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="Complemento: " HorizontalAlignment="Left" Margin="41,301,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="29" Margin="45,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="Data de Nascimento:" HorizontalAlignment="Left" Margin="433,102,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.837,-0.577"/>
+            <DatePicker HorizontalAlignment="Left" Margin="433,128,0,0" VerticalAlignment="Top" Padding="9,2,2,2" BorderThickness="0,0,0,1" Width="326" Height="28">
+                <DatePicker.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FFCCCCCC" Offset="1"/>
+                    </LinearGradientBrush>
+                </DatePicker.BorderBrush>
+            </DatePicker>
+            <Label Content="Rua:" HorizontalAlignment="Left" Margin="41,230,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="29" Margin="45,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="Cidade:" HorizontalAlignment="Left" Margin="433,174,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="29" Margin="434,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="Número:" HorizontalAlignment="Left" Margin="431,233,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="29" Margin="432,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="UF:" HorizontalAlignment="Left" Margin="664,174,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="29" Margin="668,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="E-mail:" HorizontalAlignment="Left" Margin="46,431,0,0" VerticalAlignment="Top"/>
+            <Label Content="Telefone:" HorizontalAlignment="Left" Margin="45,375,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="29" Margin="46,400,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <TextBox HorizontalAlignment="Left" Height="29" Margin="46,457,0,-11" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Image HorizontalAlignment="Left" Height="185" Margin="498,301,0,-11" VerticalAlignment="Top" Width="206"/>
+            <Button Content="SALVAR" HorizontalAlignment="Left" Margin="580,534,0,-93" VerticalAlignment="Top" Width="179" Height="34" FontWeight="Bold" BorderThickness="0" Click="Button_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>
