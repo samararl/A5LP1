@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MySql.Data.MySqlClient;
 
 
 namespace Locadora
@@ -30,25 +29,7 @@ namespace Locadora
   
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MySqlConnection conexao = new MySqlConnection("" +
-                "server=localhost;" +
-                "User Id=root;" +
-                "database=locadora;" +
-                "password=''");
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM USUARIO", conexao);
-            DataTable tabela = new DataTable();
-            try
-            {
-                conexao.Open();
-                gdvDados.DataSource = comando.ExecuteReader();
-                gdvDados.DataBind();
-            }
-            finally
-            {
-                conexao.Close();
-            }
-
-
+     
             LocadoraCliente cliente = new LocadoraCliente();
             this.NavigationService.Navigate(cliente);
 

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="locadoraModelStoreContainer" CdmEntityContainer="locadoraEntidade">
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="locadoraModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="cep" ColumnName="cep" />
+          <ScalarProperty Name="bairro" ColumnName="bairro" />
+          <ScalarProperty Name="cidade" ColumnName="cidade" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_update" ColumnName="dt_update" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filme">
+      <EntityTypeMapping TypeName="locadoraModel.Filme">
+        <MappingFragment StoreEntitySet="Filme">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="sub_titulo" ColumnName="sub_titulo" />
+          <ScalarProperty Name="duracao" ColumnName="duracao" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="sinopse" ColumnName="sinopse" />
+          <ScalarProperty Name="nota" ColumnName="nota" />
+          <ScalarProperty Name="dt_lancamento" ColumnName="dt_lancamento" />
+          <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_update" ColumnName="dt_update" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genero">
+      <EntityTypeMapping TypeName="locadoraModel.Genero">
+        <MappingFragment StoreEntitySet="Genero">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_de_Acesso">
+      <EntityTypeMapping TypeName="locadoraModel.Tipo_de_Acesso">
+        <MappingFragment StoreEntitySet="Tipo_de_Acesso">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="locadoraModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="nickname" ColumnName="nickname" />
+          <ScalarProperty Name="acesso" ColumnName="acesso" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="dt_inclusao" ColumnName="dt_inclusao" />
+          <ScalarProperty Name="dt_update" ColumnName="dt_update" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
