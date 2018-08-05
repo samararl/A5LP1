@@ -3,11 +3,14 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
       xmlns:local="clr-namespace:Locadora"
       mc:Ignorable="d" 
       d:DesignHeight="748" d:DesignWidth="1072"
       Title="Locadora - Filme" Width="1200" Height="800">
-
+    <Page.Resources>
+        <Color x:Key="Color1">#FF1B1B1C</Color>
+    </Page.Resources>
     <Grid Background="#FF263238" Height="777" Margin="3,20,-3,-18" Width="1190" RenderTransformOrigin="0.512,0.489">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0" />
@@ -21,43 +24,52 @@
             <RowDefinition Height="0"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Grid Margin="-2268,136,1558,-116" Grid.Row="1" Grid.RowSpan="2">
+        <Grid HorizontalAlignment="Left" Height="611" Margin="184,43,0,0" VerticalAlignment="Top" Width="832" Background="#FFF6F6F6" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <Label Style="{StaticResource headerTextStyle}" Margin="321,33,320,536" Content="Cadastrar Filme" Height="42" FontSize="24" >
+                <Label.Background>
+                    <ImageBrush/>
+                </Label.Background>
+            </Label>
+            <TextBox Height="106" Margin="470,112,70,0" x:Name="sinopse"  TextWrapping="Wrap" VerticalAlignment="Top" Background="Transparent" BorderThickness="1" SnapsToDevicePixels="True" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.18"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.496"/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <Label Content="Gênero: " HorizontalAlignment="Left" Margin="41,158,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" x:Name="genero" Height="29" Margin="45,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="353" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="Nome:" HorizontalAlignment="Left" Margin="41,87,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" x:Name="nome" Height="29" Margin="45,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="353" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="Elenco:" HorizontalAlignment="Left" Margin="40,288,0,0" VerticalAlignment="Top"/>
+            <Label Content="Direção:" HorizontalAlignment="Left" Margin="40,232,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" x:Name="direcao"  Height="29" Margin="46,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <TextBox HorizontalAlignment="Left" x:Name="elenco" Height="29" Margin="46,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Image HorizontalAlignment="Left" Height="281" Margin="522,232,0,0" VerticalAlignment="Top" Width="196" Source="E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\Imagens\starWars.jpg" />
+            <Label Content="Duração:" HorizontalAlignment="Left" Margin="43,427,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" x:Name="duracao" Height="29" Margin="46,455,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="Subtítulo" HorizontalAlignment="Left" Margin="42,353,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" x:Name="subtitulo" Height="29" Margin="47,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="Ano lançamento:" HorizontalAlignment="Left" Margin="285,351,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" x:Name="ano" Height="29" Margin="287,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Button Margin="708,521,50,0" VerticalAlignment="Top" Height="80" FontWeight="Bold" BorderThickness="0" Click="btnSalvar" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}">
+                <DockPanel>
+                    <Label HorizontalContentAlignment="Left"
+                            DockPanel.Dock="Bottom"
+                            Content =" Salvar" />
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition />
-            </Grid.RowDefinitions>
+                    <Image Source="E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\Imagens\salvar.png" />
+                </DockPanel>
 
-            <!-- Name -->
-            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
-                <Label Style="{StaticResource labelStyle}">Name:</Label>
-                <Label Style="{StaticResource labelStyle}"></Label>
-            </StackPanel>
-
-            <!-- Department -->
-            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" 
-Orientation="Horizontal">
-                <Label Style="{StaticResource labelStyle}">Department:</Label>
-                <Label Style="{StaticResource labelStyle}"></Label>
-            </StackPanel>
-
-            <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" 
-          HorizontalAlignment="Left">
-                <!-- Expense type and Amount table -->
-                <DataGrid ColumnHeaderStyle="{StaticResource columnHeaderStyle}" 
-                  AutoGenerateColumns="False" RowHeaderWidth="0" >
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="ExpenseType" />
-                        <DataGridTextColumn Header="Amount"  />
-                    </DataGrid.Columns>
-                </DataGrid>
-            </Grid>
+            </Button>
+            <Label Content="Nota:" HorizontalAlignment="Left" Margin="286,427,0,0" VerticalAlignment="Top" Width="61"/>
+            <TextBox HorizontalAlignment="Left" x:Name="nota" Height="29" Margin="288,455,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="Sinopse" HorizontalAlignment="Left" Margin="469,87,0,0" VerticalAlignment="Top" Width="61"/>
         </Grid>
-        <Grid Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="510" Margin="226,136,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="784" Background="#FFF6F6F6"/>
     </Grid>
+
+
 </Page>

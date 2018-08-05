@@ -19,11 +19,11 @@ namespace Locadora
         public string sub_titulo { get; set; }
         public string duracao { get; set; }
         public decimal valor { get; set; }
-        public int genero { get; set; }
+        public Nullable<int> genero { get; set; }
         public string sinopse { get; set; }
         public Nullable<decimal> nota { get; set; }
         public System.DateTime dt_lancamento { get; set; }
-        public int quantidade { get; set; }
+        public Nullable<int> quantidade { get; set; }
         public System.DateTime dt_inclusao { get; set; }
         public Nullable<System.DateTime> dt_update { get; set; }
     

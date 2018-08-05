@@ -13,10 +13,10 @@ namespace Locadora
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class locadoraEntidade : DbContext
+    public partial class locadoraEntities : DbContext
     {
-        public locadoraEntidade()
-            : base("name=locadoraEntidade")
+        public locadoraEntities()
+            : base("name=locadoraEntities")
         {
         }
     

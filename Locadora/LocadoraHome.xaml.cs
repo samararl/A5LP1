@@ -16,9 +16,7 @@ using System.Windows.Shapes;
 
 namespace Locadora
 {
-    /// <summary>
-    /// Interação lógica para LocadoraHome.xam
-    /// </summary>
+   
     public partial class LocadoraHome : Page
     {
         public LocadoraHome()
@@ -27,12 +25,29 @@ namespace Locadora
         }
 
   
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnEntrar(object sender, RoutedEventArgs e)
         {
-     
-            LocadoraCliente cliente = new LocadoraCliente();
-            this.NavigationService.Navigate(cliente);
+            
+            LocadoraInicial inicial = new LocadoraInicial();
+            try
+            {
+                using (locadoraEntities contexto = new locadoraEntities())
+                {
+                    foreach (var user in contexto.Usuario)
+                    {
+                        if(user.nickname == login.Text && user.senha == senha.Password.ToString())
+                        {
+                            incorretos.Visibility = Visibility.Hidden;
+                            this.NavigationService.Navigate(inicial);
+                        }
+                    }
+                    incorretos.Visibility = Visibility.Visible;
+                }
+            }
+            catch
+            {
 
+            }
         }
     }
 }

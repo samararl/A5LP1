@@ -20,32 +20,38 @@ C:\Users\Samara Rocha Lipolis\source\repos\Locadora\Locadora\obj\Debug\Locadora.
 C:\Users\Samara Rocha Lipolis\source\repos\Locadora\Locadora\obj\Debug\App.baml
 C:\Users\Samara Rocha Lipolis\source\repos\Locadora\Locadora\obj\Debug\LocadoraCliente.g.cs
 C:\Users\Samara Rocha Lipolis\source\repos\Locadora\Locadora\obj\Debug\LocadoraCliente.baml
+E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Detalhe.g.cs
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\LocadoraCliente.g.cs
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\LocadoraFilme.g.cs
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\LocadoraHome.g.cs
+E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\LocadoraInicial.g.cs
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\MainWindow.g.cs
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\App.g.cs
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora_Content.g.cs
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora_MarkupCompile.cache
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora_MarkupCompile.lref
-E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora.exe
-E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora.pdb
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\Locadora.exe.config
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\Locadora.exe
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\Locadora.pdb
+E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\Correios.Net.dll
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\EntityFramework.dll
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\EntityFramework.SqlServer.dll
+E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\FontAwesome.WPF.dll
+E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\Correios.Net.pdb
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\EntityFramework.xml
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\EntityFramework.SqlServer.xml
+E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\FontAwesome.WPF.xml
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\App.baml
+E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Detalhe.baml
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\LocadoraCliente.baml
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\LocadoraFilme.baml
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\LocadoraHome.baml
+E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\LocadoraInicial.baml
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\MainWindow.baml
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora.g.resources
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora.Properties.Resources.resources
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora.csproj.GenerateResource.Cache
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora.csproj.CoreCompileInputs.cache
-E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\Correios.Net.dll
-E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\bin\Debug\Correios.Net.pdb
+E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora.exe
+E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora.pdb
 E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\obj\Debug\Locadora.csprojResolveAssemblyReference.cache

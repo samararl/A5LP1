@@ -1,0 +1,60 @@
+﻿<Page x:Class="Locadora.Detalhe"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Locadora"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="Detalhe">
+
+    
+
+    <Grid Background="#FF263238" Height="777" Margin="8,7,2,16" Width="1190" RenderTransformOrigin="0.512,0.489">
+        <Grid HorizontalAlignment="Left" Height="611" Margin="187,83,0,0" VerticalAlignment="Top" Width="832" Background="#FFF6F6F6">
+            <Label x:Name="labelMovie" Style="{StaticResource headerTextStyle}" Margin="10,30,10,539"  Height="42" FontSize="24" >
+                <Label.Background>
+                    <ImageBrush/>
+                </Label.Background>
+            </Label>
+            <Label Content="Data Retorno: " HorizontalAlignment="Left" Margin="380,316,0,0" VerticalAlignment="Top"/>
+            <Label Content="Nome Locatario:" HorizontalAlignment="Left" Margin="389,413,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="29" Margin="393,441,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="353" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Label Content="Nota:" HorizontalAlignment="Left" Margin="146,443,0,0" VerticalAlignment="Top" Width="61"/>
+            <TextBox HorizontalAlignment="Left" Height="29" Margin="150,462,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
+            <Image HorizontalAlignment="Left" Height="318" Margin="73,121,0,0" VerticalAlignment="Top" Width="222" Source="E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\Imagens\starWars.jpg" />
+            <Image HorizontalAlignment="Left" Height="71" Margin="89,444,0,0" VerticalAlignment="Top" Width="52" Source="E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\Imagens\estrela.png" />
+        </Grid>
+        <TextBox x:Name="sinopse" Height="138" Margin="562,235,291,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="Transparent" BorderThickness="1" SnapsToDevicePixels="True" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.203"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.496"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label Content="Sinopse" HorizontalAlignment="Left" Margin="561,203,0,0" VerticalAlignment="Top" Width="70" Height="34"/>
+        <Button Margin="886,577,230,0" VerticalAlignment="Top" Height="80" FontWeight="Bold" BorderThickness="0" Click="Button_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}">
+            <DockPanel>
+                <Label HorizontalContentAlignment="Left"
+                    DockPanel.Dock="Bottom"
+                    Content =" Salvar" />
+                <Image Source="E:\SAMARA\IFSP\5_SEMESTRE\NET\A5LP1\Locadora\Imagens\salvar.png" />
+            </DockPanel>
+        </Button>
+        <DatePicker HorizontalAlignment="Left" Margin="561,440,0,0" VerticalAlignment="Top" Padding="9,2,2,2" BorderThickness="0,0,0,1" Width="326" Height="28">
+            <DatePicker.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                    <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                    <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                    <GradientStop Color="#FF718597" Offset="0.375"/>
+                    <GradientStop Color="#FFCCCCCC" Offset="1"/>
+                </LinearGradientBrush>
+            </DatePicker.BorderBrush>
+        </DatePicker>
+
+    </Grid>
+
+</Page>

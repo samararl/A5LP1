@@ -14,14 +14,17 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Correios.Net;
 
+
 namespace Locadora
 {
     /// <summary>
     /// Interação lógica para LocadoraCliente.xam
     /// </summary>
+    /// 
     public partial class LocadoraCliente : Page
     {
-     
+
+
         public LocadoraCliente()
         {
             InitializeComponent();
@@ -35,22 +38,52 @@ namespace Locadora
 
         private void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
-            Cliente cliente = new Cliente();
-            
-            cliente.nome = nome.Text;
-            
-            cliente.email = email.Text;
-            cliente.celular = telefone.Text;
-            cliente.dt_inclusao = DateTime.Today;
-            cliente.status = "A";
+            retangulo.Visibility = Visibility.Visible;
+            spinner.Visibility = Visibility.Visible;
+            loading.Visibility = Visibility.Visible;
 
-            //gravar no banco de dados
-            using (locadoraEntidade contexto = new locadoraEntidade())
+            Cliente cliente = new Cliente();
+
+
             {
-                contexto.Cliente.Add(cliente);
-                contexto.SaveChanges();
+                LocadoraInicial inicio = new LocadoraInicial();
+
+                cliente.nome = nome.Text;
+                cliente.email = email.Text;
+                cliente.celular = telefone.Text;
+                cliente.dt_inclusao = DateTime.Today;
+                cliente.status = "A";
+                cliente.dt_nascimento = dtnascimento.SelectedDate;
+                cliente.cidade = cidade.Text;
+                cliente.bairro = bairro.Text;
+                cliente.logradouro = logradouro.Text;
+
+                try
+                {
+                    //gravar no banco de dados
+                    using (locadoraEntities contexto = new locadoraEntities())
+                    {
+                        contexto.Cliente.Add(cliente);
+                        contexto.SaveChanges();
+                        this.NavigationService.Navigate(inicio);
+
+                    }
+
+
+                }
+                catch (Exception)
+                {
+
+
+                }
             }
+           
         }
+
+        private void Window_Load(object sender, RoutedEventArgs e)
+        {
+
+        }   
 
         private void LocalizarCEP()
         {
@@ -73,5 +106,7 @@ namespace Locadora
                 MessageBox.Show("Informe um CEP válido");
             }
         }
+
+      
     }
 }

@@ -14,21 +14,23 @@
     <Property Name="dt_inclusao" Type="date" Nullable="false" />
     <Property Name="dt_update" Type="date" />
     <Property Name="status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="logradouro" Type="varchar" MaxLength="100" />
+    <Property Name="dt_nascimento" Type="date" />
   </EntityType>
   <EntityType Name="Filme">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="titulo" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="sub_titulo" Type="varchar" MaxLength="50" />
     <Property Name="duracao" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="valor" Type="numeric" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="genero" Type="int" Nullable="false" />
+    <Property Name="genero" Type="int" />
     <Property Name="sinopse" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="nota" Type="numeric" Precision="3" Scale="0" />
     <Property Name="dt_lancamento" Type="date" Nullable="false" />
-    <Property Name="quantidade" Type="int" Nullable="false" />
+    <Property Name="quantidade" Type="int" />
     <Property Name="dt_inclusao" Type="date" Nullable="false" />
     <Property Name="dt_update" Type="date" />
   </EntityType>
@@ -60,7 +62,7 @@
     <Property Name="status" Type="char" MaxLength="1" Nullable="false" />
   </EntityType>
   <Association Name="FK_Filme_Genero">
-    <End Role="Genero" Type="Self.Genero" Multiplicity="1" />
+    <End Role="Genero" Type="Self.Genero" Multiplicity="0..1" />
     <End Role="Filme" Type="Self.Filme" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Genero">

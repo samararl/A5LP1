@@ -3,43 +3,12 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
       xmlns:local="clr-namespace:Locadora"
       mc:Ignorable="d"
       Title="Locadora - Home" Width="1200" Height="800">
 
-    <Grid Margin="-2,10,0,10" RenderTransformOrigin="0.578,0.803" Background="#FFF6F6F6" HorizontalAlignment="Left" Width="1190">
-
-        <Grid.Resources>
-            <!-- Name item template -->
-            <DataTemplate x:Key="nameItemTemplate">
-                <Label Content="{Binding XPath=@Name}"/>
-            </DataTemplate>
-            <!-- Expense Report Data -->
-            <XmlDataProvider x:Key="ExpenseDataSource" XPath="Expenses">
-                <x:XData>
-                    <Expenses xmlns="">
-                        <Person Name="Mike" Department="Legal">
-                            <Expense ExpenseType="Lunch" ExpenseAmount="50" />
-                            <Expense ExpenseType="Transportation" ExpenseAmount="50" />
-                        </Person>
-                        <Person Name="Lisa" Department="Marketing">
-                            <Expense ExpenseType="Document printing"
-      ExpenseAmount="50"/>
-                            <Expense ExpenseType="Gift" ExpenseAmount="125" />
-                        </Person>
-                        <Person Name="John" Department="Engineering">
-                            <Expense ExpenseType="Magazine subscription" 
-     ExpenseAmount="50"/>
-                            <Expense ExpenseType="New machine" ExpenseAmount="600" />
-                            <Expense ExpenseType="Software" ExpenseAmount="500" />
-                        </Person>
-                        <Person Name="Mary" Department="Finance">
-                            <Expense ExpenseType="Dinner" ExpenseAmount="100" />
-                        </Person>
-                    </Expenses>
-                </x:XData>
-            </XmlDataProvider>
-        </Grid.Resources>
+    <Grid Margin="-2,10,0,10" RenderTransformOrigin="0.578,0.803" Background="#FF263238" HorizontalAlignment="Left" Width="1190">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1190" />
@@ -55,25 +24,55 @@
 
 
 
-        <Label Style="{StaticResource headerTextStyle}" Margin="525,145,451,593" Content="Locadora Moon's" Height="42" FontSize="24" >
+        <Border BorderBrush="#FFFFFFFF" BorderThickness="1" HorizontalAlignment="Left" Height="332" Margin="422,106,0,0" VerticalAlignment="Top" Width="418" CornerRadius="20" Background="#FFF6F6F6"/>
+
+
+
+        <Label Style="{StaticResource headerTextStyle}" Margin="538,147,438,591" Content="Locadora Moon's" Height="42" FontSize="24" Foreground="#FF666666" >
             <Label.Background>
                 <ImageBrush/>
             </Label.Background>
         </Label>
 
         <!-- View report button -->
-        <Label Content="Senha:" HorizontalAlignment="Left" Margin="468,276,0,0" VerticalAlignment="Top" Height="26" Width="52" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="525,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Background="Transparent" BorderThickness="0,0,0,1"/>
-        <Label Content="Login:" HorizontalAlignment="Left" Margin="468,217,0,0" VerticalAlignment="Top" Height="26" Width="52" FontWeight="Bold"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="525,275,0,0" VerticalAlignment="Top" Width="214" Height="26" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True"/>
-        <Button Content="ENTRAR" HorizontalAlignment="Left" Margin="652,379,0,0" VerticalAlignment="Top" Width="87" Height="29" FontWeight="Bold" BorderThickness="0" Click="Button_Click">
+        <Label Content="Senha:" HorizontalAlignment="Left" Margin="525,257,0,0" VerticalAlignment="Top" Height="26" Width="52" FontWeight="Bold" Foreground="#FF666666"/>
+        <TextBox HorizontalAlignment="Left" x:Name="login" Height="23" Margin="525,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Background="Transparent" BorderThickness="0,0,0,1" Foreground="#FF999999"/>
+        <Label Content="Login:" HorizontalAlignment="Left" Margin="525,194,0,0" VerticalAlignment="Top" Height="26" Width="52" FontWeight="Bold" Foreground="#FF666666" RenderTransformOrigin="1.077,-0.077"/>
+        <PasswordBox HorizontalAlignment="Left" x:Name="senha" Margin="525,275,0,0" VerticalAlignment="Top" Width="214" Height="26" Background="Transparent" BorderThickness="0,0,0,1" SnapsToDevicePixels="True" Foreground="#FF999999"/>
+        <Button Content="ENTRAR" HorizontalAlignment="Left" Margin="652,379,0,0" VerticalAlignment="Top" Width="87" Height="29" FontWeight="Bold" BorderThickness="0" Click="btnEntrar" Foreground="#FFF6F6F6" Background="#FF666666">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
+                    <Style.Triggers>
+                        <Trigger Property ="IsMouseOver" Value="True">
+                            <Setter Property= "Background" Value="Red"/>
+                        </Trigger>
+                    </Style.Triggers>
+
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Esqueceu sua senha?" HorizontalAlignment="Left" Margin="596,323,0,0" VerticalAlignment="Top" Width="143" BorderBrush="Transparent" Background="Transparent" Padding="1" Grid.IsSharedSizeScope="True" Height="20"/>
-        <Border BorderBrush="#FF666666" BorderThickness="1" HorizontalAlignment="Left" Height="332" Margin="412,101,0,0" VerticalAlignment="Top" Width="418" CornerRadius="20"/>
+
+        <fa:ImageAwesome Icon="User" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="720,216,453,542" RenderTransformOrigin="0.618,0.5" Height="22" Width="17" Foreground="#FF666666" >
+            <fa:ImageAwesome.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.074"/>
+                    <TranslateTransform Y="-0.004"/>
+                </TransformGroup>
+            </fa:ImageAwesome.RenderTransform>
+        </fa:ImageAwesome>
+        <fa:ImageAwesome Icon="lock" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="719,270,454,488" RenderTransformOrigin="-0.617,0.592" Height="22" Width="17" Foreground="#FF666666" >
+            <fa:ImageAwesome.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.074"/>
+                    <TranslateTransform Y="-0.032" X="-0.003"/>
+                </TransformGroup>
+            </fa:ImageAwesome.RenderTransform>
+        </fa:ImageAwesome>
+        <Label Content="Usuário ou senha incorretos!" x:Name="incorretos" HorizontalAlignment="Left" Margin="554,306,0,0" VerticalAlignment="Top" Width="161" RenderTransformOrigin="0.475,0.096" Foreground="#FFB21616" Visibility="Hidden"/>
     </Grid>
 </Page>

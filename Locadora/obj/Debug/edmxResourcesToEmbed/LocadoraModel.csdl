@@ -14,21 +14,23 @@
     <Property Name="dt_inclusao" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="dt_update" Type="DateTime" Precision="0" />
     <Property Name="status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="logradouro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="dt_nascimento" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="Filme">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="sub_titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="duracao" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="valor" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="genero" Type="Int32" Nullable="false" />
+    <Property Name="genero" Type="Int32" />
     <Property Name="sinopse" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="nota" Type="Decimal" Precision="3" Scale="0" />
     <Property Name="dt_lancamento" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="quantidade" Type="Int32" Nullable="false" />
+    <Property Name="quantidade" Type="Int32" />
     <Property Name="dt_inclusao" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="dt_update" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Genero1" Relationship="Self.FK_Filme_Genero" FromRole="Filme" ToRole="Genero" />
@@ -64,7 +66,7 @@
     <NavigationProperty Name="Tipo_de_Acesso" Relationship="Self.FK_Usuario_Tipo_de_Acesso" FromRole="Usuario" ToRole="Tipo_de_Acesso" />
   </EntityType>
   <Association Name="FK_Filme_Genero">
-    <End Role="Genero" Type="Self.Genero" Multiplicity="1" />
+    <End Role="Genero" Type="Self.Genero" Multiplicity="0..1" />
     <End Role="Filme" Type="Self.Filme" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Genero">
@@ -87,7 +89,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="locadoraEntidade" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="locadoraEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Cliente" EntityType="Self.Cliente" />
     <EntitySet Name="Filme" EntityType="Self.Filme" />
     <EntitySet Name="Genero" EntityType="Self.Genero" />

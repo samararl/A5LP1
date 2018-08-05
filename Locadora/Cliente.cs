@@ -24,5 +24,7 @@ namespace Locadora
         public System.DateTime dt_inclusao { get; set; }
         public Nullable<System.DateTime> dt_update { get; set; }
         public string status { get; set; }
+        public string logradouro { get; set; }
+        public Nullable<System.DateTime> dt_nascimento { get; set; }
     }
 }
